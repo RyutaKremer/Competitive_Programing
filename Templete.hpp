@@ -17,10 +17,3 @@ typedef long long ll;
 typedef unsigned long long ull;
 const int INF = 1e7;
 const ll MOD = 1e9 + 7;
-
-int main()
-{
-    cout<<"Hello World!"<<endl;
-
-    return 0;
-}
