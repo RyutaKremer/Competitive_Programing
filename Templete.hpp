@@ -6,10 +6,11 @@ using namespace std;
 #define RREP(i,a) RFOR(i,a,0)
 #define REPALL(i,v) for (int i = 0; i < v.size(); i++)
 #define RREPALL(i,v) for (int i = v.size()-1; i >= 0; i--)
+#define ALL(v) v.begin(), v.end()
 #define SORT(v) sort(v.begin(), v.end())
 #define MIN_ELEMENT(v) min_element(v.begin(), v.end())
 #define MAX_ELEMENT(v) max_element(v.begin(), v.end())
-#define COUNT(v,n) count(v.begin(), v.end(), n);
+#define COUNT(v,n) count(v.begin(), v.end(), n)
 void YES(bool flag) {cout<<(flag ? "YES" : "NO")<<endl;}
 void Yes(bool flag) {cout<<(flag ? "Yes" : "No")<<endl;}
 void yes(bool flag) {cout<<(flag ? "yes" : "no")<<endl;}

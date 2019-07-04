@@ -60,30 +60,36 @@ vector<pair<int, int>> prime_factorization(ll n)
     return rtn;
 }
 
-vector<vector<ll>> comb(111111, vector<ll>(100, -1));
+ll mypow(ll a, ll b)
+{
+    ll r = 1ll;
+    while(b != 0){
+        if(b&1) r = r * a % MOD;
+        a = a * a % MOD;
+        b /= 2;
+    }
+    return r;
+}
+
+vector<ll> fac;
+vector<ll> ifac;
+
+void factorial_init(ll n)
+{
+    fac.resize(n+1);
+    ifac.resize(n+1);
+    fac[0] = 1;
+    ifac[0] = 1;
+    REP(i,n) {
+        fac[i+1] = fac[i] * (i + 1) % MOD;
+        ifac[i+1] = ifac[i] * mypow(i + 1, MOD - 2) % MOD;
+    }
+}
+
 ll Combination(ll a, ll b)
 {
-    if (comb[a][b] != -1) {
-        return comb[a][b];
-    }
-
-    if (b > a / 2) {
-        return Combination(a, a - b);
-    }
-
-    if (a == b || b == 0) {
-        return 1;
-    }
-
-    if (comb[a-1][b-1] == -1) {
-        comb[a-1][b-1] = Combination(a-1, b-1);
-    }
-
-    if (comb[a-1][b] == -1) {
-        comb[a-1][b] = Combination(a-1, b);
-    }
-
-    comb[a][b] = (comb[a-1][b-1] + comb[a-1][b]) % MOD;
-
-    return comb[a][b];
+    if(a == 0 && b == 0) return 1;
+    if(a < b || a < 0) return 0;
+    ll r = ifac[a-b] * ifac[b] % MOD;
+    return r * fac[a] % MOD;
 }
