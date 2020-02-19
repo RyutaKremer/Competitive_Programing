@@ -16,47 +16,64 @@ ll LCM(ll a, ll b)
     return a * b / GCD(a, b);
 }
 
-vector<ll> primenum;
+vector<ll> prime_num;
+//nまでの素数を取得
+//10^3以上には使わない方が良い
 void get_prime_nembers(ll n)
 {
-    ll m = n;
-    FOR(i,2,m+1) {
+    FOR(i,2,n + 1) {
         bool flag = true;
-        REPALL(j,primenum) {
-            if (i % primenum[j] == 0) {
+        REPALL(j,prime_num) {
+            if (i % prime_num[j] == 0) {
                 flag = false;
                 break;
             }
         }
         if (flag) {
-            primenum.push_back(i);
-            while (m % i == 0) {
-                m /= i;
-            }
-        }
-        if (i > sqrt(n)+1) {
-            primenum.push_back(m);
-            break;
+            prime_num.push_back(i);
         }
     }
 }
 
-vector<pair<int, int>> prime_factorization(ll n)
+vector<pair<ll, ll>> factorization_vector(ll n)
 {
-    if (primenum.empty())
-        get_prime_nembers(n);
+    vector<pair<ll, ll>> rtn;
 
-    vector<pair<int, int>> rtn;
-    REPALL(i,primenum) {
-        int num = 0;
-        ll tmpn = n;
-        while(tmpn % primenum[i] == 0) {
-            num++;
-            tmpn /= primenum[i];
+    ll m = n;
+    ll idx = 0;
+    for (ll i = 2; i * i <= m; i++) {
+        if (n % i != 0)
+            continue;
+
+        rtn.push_back({i,0});
+        while (m % i == 0) {
+            rtn[idx].second++;
+            m /= i;
         }
-        if (num > 0)
-            rtn.push_back(make_pair(primenum[i],num));
+        idx++;
     }
+    if (m != 1) {
+        rtn.push_back({m,1});
+    }
+
+    return rtn;
+}
+
+map<ll, ll> factorization_map(ll n)
+{
+    map<ll, ll> rtn;
+
+    ll m = n;
+    for (ll i = 2; i * i <= m; i++) {
+        while (m % i == 0) {
+            rtn[i]++;
+            m /= i;
+        }
+    }
+    if (m != 1) {
+        rtn[m]++;
+    }
+
     return rtn;
 }
 
