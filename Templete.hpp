@@ -30,3 +30,4 @@ typedef vector<ll> VLL;
 typedef vector<vector<ll>> VVLL;
 const int INF = 1e7;
 const ll MOD = 1e9 + 7;
+const double pi = 3.141592653589793;
