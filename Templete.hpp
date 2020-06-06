@@ -13,15 +13,15 @@ using namespace std;
 #define MAX_ELEMENT(x) max_element(ALL(x))
 #define COUNT(x,num) count(ALL(x), num)
 #define MEMSET(x,val) memset(x, val, sizeof(x))
-#define MAX(a,b) a = max(a,b)
-#define MIN(a,b) a = min(a,b)
+#define CHMAX(a,b) a = max(a,b)
+#define CHMIN(a,b) a = min(a,b)
 #define debug(x) cerr<<__LINE__<<": "<<(#x)<<" = "<<(x)<<endl;
 void YES(bool flag) {cout<<(flag ? "YES" : "NO")<<endl;}
 void Yes(bool flag) {cout<<(flag ? "Yes" : "No")<<endl;}
 void yes(bool flag) {cout<<(flag ? "yes" : "no")<<endl;}
 #define e1 first
 #define e2 second
-#define nextline putchar('\n')
+#define newline putchar('\n')
 typedef long long ll;
 typedef unsigned long long ull;
 typedef vector<int> VI;
