@@ -96,10 +96,12 @@ void factorial_init(ll n)
     fac.resize(n+1);
     ifac.resize(n+1);
     fac[0] = 1;
-    ifac[0] = 1;
     REP(i,n) {
         fac[i+1] = fac[i] * (i + 1) % MOD;
-        ifac[i+1] = ifac[i] * mypow(i + 1, MOD - 2) % MOD;
+    }
+    ifac[n] = mypow(fac[n], MOD - 2) % MOD;
+    RREP(i,n) {
+        ifac[i] = ifac[i+1] * (i + 1) % MOD;
     }
 }
 
