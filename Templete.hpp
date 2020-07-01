@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+template <class T> T input() {T t; cin>>t; return t;}
 #define FOR(i,a,b) for (ll i = a; i < b; i++)
 #define REP(i,b) FOR(i,0,b)
 #define RFOR(i,a,b) for (ll i = a-1; i >= b; i--)
