@@ -23,6 +23,8 @@ void yes(bool flag) {cout<<(flag ? "yes" : "no")<<endl;}
 #define e1 first
 #define e2 second
 #define newline putchar('\n')
+#define cspace ' '
+#define sspace " "
 typedef long long ll;
 typedef unsigned long long ull;
 typedef vector<int> VI;
