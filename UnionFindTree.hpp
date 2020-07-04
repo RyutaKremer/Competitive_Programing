@@ -3,11 +3,13 @@
 //整数配列に対応
 class UnionFindTree {
 public:
+    int size;
     vector<int> rank, p;
 
     UnionFindTree() {}
 
-    UnionFindTree(int size) {
+    UnionFindTree(int num) {
+        size = num;
         rank.resize(size, 0);
         p.resize(size, 0);
         for (int i = 0; i < size; ++i) {
@@ -53,10 +55,13 @@ public:
 
     int maxUnion()
     {
-        int size = p.size();
         int r = 0;
+        map<int, int> mp;
         REP(i,size) {
-            r = max(r, (int)count(p.begin(), p.end(), i));
+            mp[findSet(i)]++;
+        }
+        REPITR(itr,mp) {
+            r = CHMAX(r, itr->e2);
         }
         return r;
     }
