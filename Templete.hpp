@@ -20,6 +20,7 @@ template <class T> T input() {T t; cin>>t; return t;}
 void YES(bool flag) {cout<<(flag ? "YES" : "NO")<<endl;}
 void Yes(bool flag) {cout<<(flag ? "Yes" : "No")<<endl;}
 void yes(bool flag) {cout<<(flag ? "yes" : "no")<<endl;}
+#define PRINT_ARRAY_H(i,a) REPALL(i,a) {cout<<a[i]<<(i != a.size()-1 ? " " : "\n");}
 #define e1 first
 #define e2 second
 #define newline putchar('\n')
