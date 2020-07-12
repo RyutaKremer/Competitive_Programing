@@ -37,3 +37,21 @@ const ll MOD = 1e9 + 7;
 const double pi = 3.141592653589793;
 const VI dx = {1, 0, -1, 0};
 const VI dy = {0, 1, 0, -1};
+
+void solve()
+{
+    ll a, b, c, d, n, m, l, r, k, x, y, z, ans = 0ll;
+    string s, t;
+    cin>>n;
+    cout<<ans<<endl;
+}
+
+int main()
+{
+    int __t = 1;
+    cin>>__t;
+    REP(i,__t) {
+        solve();
+    }
+    return 0;
+}
