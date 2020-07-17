@@ -6,7 +6,7 @@ typedef vector<int> VI;
 typedef vector<vector<int>> VVI;
 typedef vector<ll> VLL;
 typedef vector<vector<ll>> VVLL;
-typedef pair<ll, ll> Pair
+typedef pair<ll, ll> Pair;
 template <class T> T input() {T t; cin>>t; return t;}
 #define FOR(i,a,b) for (ll i = a; i < b; i++)
 #define REP(i,b) FOR(i,0,b)
@@ -53,6 +53,7 @@ void solve()
 
 int main()
 {
+    cout<<fixed<<setprecision(20);
     int __t = 1;
     //cin>>__t;
     REP(i,__t) {
