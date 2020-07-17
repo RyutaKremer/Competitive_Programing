@@ -21,6 +21,7 @@ void YES(bool flag) {cout<<(flag ? "YES" : "NO")<<endl;}
 void Yes(bool flag) {cout<<(flag ? "Yes" : "No")<<endl;}
 void yes(bool flag) {cout<<(flag ? "yes" : "no")<<endl;}
 #define PRINT_ARRAY_H(a) REPALL(__i,a) {cout<<a[__i]<<(__i != a.size()-1 ? " " : "");} newline;
+#define PRINT_ARRAY_V(a) REPALL(__i,a) {cout<<a[__i]<<endl;}
 #define e1 first
 #define e2 second
 #define newline putchar('\n')
