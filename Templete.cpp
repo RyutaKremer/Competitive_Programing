@@ -1,5 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
+typedef long long ll;
+typedef unsigned long long ull;
+typedef vector<int> VI;
+typedef vector<vector<int>> VVI;
+typedef vector<ll> VLL;
+typedef vector<vector<ll>> VVLL;
+typedef pair<ll, ll> Pair
 template <class T> T input() {T t; cin>>t; return t;}
 #define FOR(i,a,b) for (ll i = a; i < b; i++)
 #define REP(i,b) FOR(i,0,b)
@@ -16,6 +23,7 @@ template <class T> T input() {T t; cin>>t; return t;}
 #define MEMSET(x,val) memset(x, val, sizeof(x))
 #define CHMAX(a,b) a = max(a,b)
 #define CHMIN(a,b) a = min(a,b)
+#define IN_RANGE_V2(v,k,x,y) (0<=x+dx[k]&&x+dx[k]<v[y].size()&&0<=y+dy[k]&&y+dy[k]<v.size())
 #define debug(x) cerr<<__LINE__<<": "<<(#x)<<" = "<<(x)<<endl;
 void YES(bool flag) {cout<<(flag ? "YES" : "NO")<<endl;}
 void Yes(bool flag) {cout<<(flag ? "Yes" : "No")<<endl;}
@@ -27,17 +35,13 @@ void yes(bool flag) {cout<<(flag ? "yes" : "no")<<endl;}
 #define newline putchar('\n')
 #define cspace ' '
 #define sspace " "
-typedef long long ll;
-typedef unsigned long long ull;
-typedef vector<int> VI;
-typedef vector<vector<int>> VVI;
-typedef vector<ll> VLL;
-typedef vector<vector<ll>> VVLL;
 const int INF = 1e7;
 const ll MOD = 1e9 + 7;
 const double pi = 3.141592653589793;
 const VI dx = {1, 0, -1, 0};
 const VI dy = {0, 1, 0, -1};
+//const VI dx = {1, 1, 0, -1, -1, -1, 0, 1};
+//const VI dy = {0, 1, 1, 1, 0, -1, -1, -1};
 
 void solve()
 {
@@ -50,7 +54,7 @@ void solve()
 int main()
 {
     int __t = 1;
-    cin>>__t;
+    //cin>>__t;
     REP(i,__t) {
         solve();
     }
