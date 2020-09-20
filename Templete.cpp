@@ -23,7 +23,7 @@ template <class T> T input() {T t; cin>>t; return t;}
 #define MEMSET(x,val) memset(x, val, sizeof(x))
 #define CHMAX(a,b) a = max(a,b)
 #define CHMIN(a,b) a = min(a,b)
-#define FIND(x,key) x.find(key) != x.end()
+#define FIND(x,key) (x.find(key) != x.end())
 #define IN_RANGE_V2(v,k,x,y) (0<=x+dx[k]&&x+dx[k]<v[y].size()&&0<=y+dy[k]&&y+dy[k]<v.size())
 #define debug(x) cerr<<__LINE__<<": "<<(#x)<<" = "<<(x)<<endl;
 void YES(bool flag) {cout<<(flag ? "YES" : "NO")<<endl;}
