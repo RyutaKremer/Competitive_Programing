@@ -7,6 +7,7 @@ typedef vector<vector<int>> VVI;
 typedef vector<ll> VLL;
 typedef vector<vector<ll>> VVLL;
 typedef pair<ll, ll> Pair;
+typedef vector<string> VSTR;
 template <class T> T input() {T t; cin>>t; return t;}
 #define FOR(i,a,b) for (ll i = a; i < b; i++)
 #define REP(i,b) FOR(i,0,b)
