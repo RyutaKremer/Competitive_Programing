@@ -37,7 +37,7 @@ void yes(bool flag) {cout<<(flag ? "yes" : "no")<<endl;}
 #define newline putchar('\n')
 #define cspace ' '
 #define sspace " "
-const int INF = 1e7;
+const ll INF = 1e7;
 const ll MOD = 1e9 + 7;
 const double pi = 3.141592653589793;
 const VI dx = {1, 0, -1, 0};
